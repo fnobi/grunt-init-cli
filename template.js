@@ -1,4 +1,4 @@
-exports.description = 'web page template (compass + embed require + mocha + koko)';
+exports.description = 'grunt template for node.js cli application.';
 
 // Template-specific notes to be displayed before question prompts.
 exports.notes = '';
@@ -13,7 +13,8 @@ exports.warnOn = '*';
 exports.template = function (grunt, init, done) {
     init.process( {}, [
         init.prompt('name'),
-        init.prompt('description')
+        init.prompt('description'),
+        init.prompt('author_name')
     ], function(err, props) {
         // Files to copy (and process).
         var files = init.filesToCopy(props);

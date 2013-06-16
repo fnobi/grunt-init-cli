@@ -1,19 +1,17 @@
 {
-  "name": "root",
+  "name": "{%= name %}",
+  "description": "{%= description %}",
   "version": "0.0.0",
-  "description": "ERROR: No README.md file found!",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "mocha"
   },
-  "repository": "",
-  "author": "",
+  "author": "{%= author_name %}",
   "license": "BSD",
   "dependencies": {
     "optimist": "~0.5.2"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
     "chai": "~1.6.1",
     "mocha": "~1.11.0"
   }
