@@ -13,6 +13,8 @@
     "optimist": "~0.5.2"
   },
   "devDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "chai": "~1.6.1",
+    "mocha": "~1.11.0"
   }
 }
