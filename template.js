@@ -17,11 +17,14 @@ exports.template = function (grunt, init, done) {
         {
             name: 'bin',
             message: 'bin name',
-            default: require('path').dirname(process.cwd()),
+            default: require('path').basename(process.cwd()),
             validator: /^[a-zA-Z0-9_\-]+$/
         },
         init.prompt('author_name')
     ], function(err, props) {
+        // add info
+        props.template_name = 'cli';
+
         // Files to copy (and process).
         var files = init.filesToCopy(props);
 
