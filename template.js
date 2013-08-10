@@ -14,6 +14,12 @@ exports.template = function (grunt, init, done) {
     init.process( {}, [
         init.prompt('name'),
         init.prompt('description'),
+        {
+            name: 'bin',
+            message: 'bin name',
+            default: require('path').dirname(process.cwd()),
+            validator: /^[a-zA-Z0-9_\-]+$/
+        },
         init.prompt('author_name')
     ], function(err, props) {
         // Files to copy (and process).
@@ -23,7 +29,7 @@ exports.template = function (grunt, init, done) {
         init.copyAndProcess(files, props, {});
 
         // executable
-        require('fs').chmodSync('bin/' + props.name, '0755');
+        require('fs').chmodSync('bin/' + props.bin, '0755');
 
         // All done!
         done();
