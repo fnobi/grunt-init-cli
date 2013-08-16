@@ -20,7 +20,8 @@ exports.template = function (grunt, init, done) {
             default: require('path').basename(process.cwd()),
             validator: /^[a-zA-Z0-9_\-]+$/
         },
-        init.prompt('author_name')
+        init.prompt('author_name'),
+        init.prompt('repository')
     ], function(err, props) {
         // add info
         props.template_name = 'cli';
