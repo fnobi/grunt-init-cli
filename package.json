@@ -1,0 +1,24 @@
+{
+  "name": "grunt-init-cli",
+  "version": "0.0.0",
+  "description": "grunt template for node.js cli application.",
+  "main": "template.js",
+  "dependencies": {
+    "async": "~0.2.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fnobi/grunt-init-cli.git"
+  },
+  "keywords": [
+    "gruntinit"
+  ],
+  "author": "Fujisawa Shin",
+  "license": "BSD",
+  "gitHead": "ca51cb06aae2ea251589e443784c2e7e4c09c121",
+  "readmeFilename": "README.md"
+}
