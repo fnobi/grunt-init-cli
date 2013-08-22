@@ -1,3 +1,5 @@
+var shellLines = require('./lib/shellLines');
+
 exports.description = 'grunt template for node.js cli application.';
 
 // Template-specific notes to be displayed before question prompts.
@@ -35,7 +37,10 @@ exports.template = function (grunt, init, done) {
         // executable
         require('fs').chmodSync('bin/' + props.bin, '0755');
 
-        // All done!
-        done();
+        // npm install
+        shellLines([{
+            command: 'npm install',
+            message: 'Installing npm dependencies'
+        }], done);
     });
 };
